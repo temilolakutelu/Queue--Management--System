@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Queue Mgt System</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="jquery-3.3.1.min.js">
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div>
+        <section class="container pb-5">
+            <!--for demo wrap-->
+            <div class="container-fluid d-flex justify-content-start">
+                <div class=" img-logo container">
+                    <img class=" img-responsive img-fluid" src="images/logo.png" alt="pizza jungle">
+                </div>
+                <div class="header row pt-4 w-100">
+                    <p class="col-4">June 28,2019</p>
+                    <p class="col-2">11:58AM</p>
+                    <p class="col-3">Average Wait <br>15mins</p>
+                    <p class="col-3">Today's Order <br>32</p>
+                </div>
+            </div>
+            <br>
+
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead class="tbl-header">
+                        <tr>
+                            <th>Order No</th>
+                            <th>Name</th>
+                            <th>Order </th>
+                            <th>Ready in...</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>John doe </td>
+                            <td>PJ margarita pizza</td>
+                            <td>Now</td>
+                            <td>Ready</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Remi Martins</td>
+                            <td>Wild chicken feast pizza</td>
+                            <td>2 Minutes</td>
+                            <td>Quality Check</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Uche Agwu</td>
+                            <td>Tarzan's meaty feast pizza</td>
+                            <td>6 Minutes</td>
+                            <td>In the Oven</td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>Dafe Ibio</td>
+                            <td>Simba's pepperoni pizza</td>
+                            <td>10 Minutes</td>
+                            <td>In the Oven</td>
+                        </tr>
+                        <tr>
+                            <td>005</td>
+                            <td>Shakirat Mohammed</td>
+                            <td>Sausage den pizza</td>
+                            <td>15 Minutes</td>
+                            <td>Being Made</td>
+                        </tr>
+                        <tr>
+                            <td>006</td>
+                            <td>AUSENCO</td>
+                            <td>Garden fresh pizza$2.38</td>
+                            <td>18 Minutes</td>
+                            <td>On Queue</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>John doe </td>
+                            <td>PJ margarita pizza</td>
+                            <td>Now</td>
+                            <td>Ready</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Remi Martins</td>
+                            <td>Wild chicken feast pizza</td>
+                            <td>2 Minutes</td>
+                            <td>Quality Check</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+    </div>
+
+    <script>
+        // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+        $(window).on("load resize ", function () {
+            var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+            $('.tbl-header').css({ 'padding-right': scrollWidth });
+        }).resize();
+    </script>
+</body>
+
+</html>
